@@ -2,235 +2,235 @@
     {
         "step": "Setup",
         "status": "info",
-        "timestamp": "2025-08-31T19:52:33.261672",
-        "details": "Using account: niklasdornberger@gmail.com and proxy: http://res.proxy-seller.com:10125"
+        "timestamp": "2025-08-31T20:43:31.552410",
+        "details": "Using account: tobiashenschel7@gmail.com, proxy: http://res.proxy-seller.com:10123"
     },
     {
         "step": "Login",
         "status": "info",
-        "timestamp": "2025-08-31T19:52:35.459177",
-        "details": "Navigating to Amazon.de for niklasdornberger@gmail.com"
+        "timestamp": "2025-08-31T20:43:33.723134",
+        "details": "Navigating to Amazon.de for tobiashenschel7@gmail.com"
     },
     {
         "step": "Login",
         "status": "success",
-        "timestamp": "2025-08-31T19:52:52.229428",
-        "details": "Already logged in from previous session"
+        "timestamp": "2025-08-31T20:43:41.155155",
+        "details": "Already logged in from a previous session."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T19:52:52.229474",
-        "details": "Starting to browse 5 random products"
+        "timestamp": "2025-08-31T20:43:41.155198",
+        "details": "Starting to browse 5 random products."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T19:52:52.229492",
-        "details": "Browsing product 1/5: angebote"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:53:20.351019",
-        "details": "Successfully browsed product 1/5"
+        "timestamp": "2025-08-31T20:43:41.155224",
+        "details": "Searching for 'angebote' (product 1/5)"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T19:53:20.351226",
-        "details": "Browsing product 2/5: elektronik"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:53:55.846437",
-        "details": "Successfully browsed product 2/5"
+        "timestamp": "2025-08-31T20:43:46.159849",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T19:53:55.846807",
-        "details": "Browsing product 3/5: angebote"
+        "timestamp": "2025-08-31T20:43:46.216014",
+        "details": "Navigating to product page: https://www.amazon.de/INIU-Schnellladekabel-Gefloc..."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T19:54:26.114753",
-        "details": "Successfully browsed product 3/5"
+        "timestamp": "2025-08-31T20:43:57.678573",
+        "details": "Successfully browsed product 10/5."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T19:54:26.114982",
-        "details": "Browsing product 4/5: angebote"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:54:45.837893",
-        "details": "Successfully browsed product 4/5"
+        "timestamp": "2025-08-31T20:43:57.678653",
+        "details": "Searching for 'b\u00fccher' (product 2/5)"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T19:54:45.838049",
-        "details": "Browsing product 5/5: angebote"
+        "timestamp": "2025-08-31T20:44:04.251113",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:44:04.315064",
+        "details": "Navigating to product page: https://www.amazon.de/22-Bahnen-Lieblingsbuch-unab..."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T19:55:10.435347",
-        "details": "Successfully browsed product 5/5"
+        "timestamp": "2025-08-31T20:44:15.464759",
+        "details": "Successfully browsed product 10/5."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:44:15.465055",
+        "details": "Searching for 'b\u00fccher' (product 3/5)"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:44:22.436881",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:44:22.476375",
+        "details": "Navigating to product page: https://www.amazon.de/viel-gedacht-wenig-gelebt-ve..."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T19:55:10.435543",
-        "details": "Finished browsing products"
+        "timestamp": "2025-08-31T20:44:35.182630",
+        "details": "Successfully browsed product 10/5."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:44:35.182768",
+        "details": "Searching for 'bestseller' (product 4/5)"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:44:43.310313",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:44:43.352283",
+        "details": "Navigating to product page: https://www.amazon.de/Unser-Tag-ist-heute-Aufricht..."
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T20:44:56.832458",
+        "details": "Successfully browsed product 10/5."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:44:56.832850",
+        "details": "Searching for 'elektronik' (product 5/5)"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:45:03.607482",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T20:45:03.656095",
+        "details": "Navigating to product page: https://www.amazon.de/Elektronik-f%C3%BCr-Dummies-..."
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T20:45:16.638212",
+        "details": "Successfully browsed product 10/5."
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T20:45:16.638291",
+        "details": "Finished browsing products."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T19:55:10.435579",
-        "details": "Attempting to add 2 products to wishlist"
+        "timestamp": "2025-08-31T20:45:16.638463",
+        "details": "Attempting to add 2 products to wishlist."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T19:56:01.154395",
-        "details": "No wishlist button found on this page, trying another product"
-    },
-    {
-        "step": "Error",
-        "status": "critical",
-        "timestamp": "2025-08-31T19:56:01.160397",
-        "details": "An error occurred: ElementHandle.get_attribute: Execution context was destroyed, most likely because of a navigation"
-    },
-    {
-        "step": "Error Handling",
-        "status": "info",
-        "timestamp": "2025-08-31T19:56:01.871173",
-        "details": "Screenshot saved to screenshots/error_20250831_195601.png"
-    },
-    {
-        "step": "Error Handling",
-        "status": "warning",
-        "timestamp": "2025-08-31T19:56:01.871198",
-        "details": "Retrying... (Attempt 1/1)"
-    },
-    {
-        "step": "Login",
-        "status": "info",
-        "timestamp": "2025-08-31T19:56:12.825142",
-        "details": "Navigating to Amazon.de for niklasdornberger@gmail.com"
-    },
-    {
-        "step": "Login",
-        "status": "success",
-        "timestamp": "2025-08-31T19:56:28.982989",
-        "details": "Already logged in from previous session"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T19:56:28.983054",
-        "details": "Starting to browse 5 random products"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T19:56:28.983072",
-        "details": "Browsing product 1/5: bestseller"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:57:02.985406",
-        "details": "Successfully browsed product 1/5"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T19:57:02.985612",
-        "details": "Browsing product 2/5: angebote"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:57:27.876726",
-        "details": "Successfully browsed product 2/5"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T19:57:27.876893",
-        "details": "Browsing product 3/5: kleidung"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:58:23.816954",
-        "details": "Successfully browsed product 3/5"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T19:58:23.819590",
-        "details": "Browsing product 4/5: kleidung"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:59:00.161270",
-        "details": "Successfully browsed product 4/5"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T19:59:00.161887",
-        "details": "Browsing product 5/5: angebote"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:59:28.252789",
-        "details": "Successfully browsed product 5/5"
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T19:59:28.252913",
-        "details": "Finished browsing products"
+        "timestamp": "2025-08-31T20:45:16.638514",
+        "details": "Searching for 'elektronik' (attempt 1)"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T19:59:28.252941",
-        "details": "Attempting to add 2 products to wishlist"
+        "timestamp": "2025-08-31T20:45:23.185730",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:00:16.260608",
-        "details": "No wishlist button found on this page, trying another product"
+        "timestamp": "2025-08-31T20:45:23.214936",
+        "details": "Navigating to product page: https://www.amazon.de/Elektronik-f%C3%BCr-Dummies-..."
     },
     {
-        "step": "Error",
-        "status": "critical",
-        "timestamp": "2025-08-31T20:00:16.264445",
-        "details": "An error occurred: ElementHandle.get_attribute: Execution context was destroyed, most likely because of a navigation"
+        "step": "Wishlist",
+        "status": "success",
+        "timestamp": "2025-08-31T20:45:32.534326",
+        "details": "Added product 1/2 to wishlist."
     },
     {
-        "step": "Error Handling",
+        "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:00:16.465202",
-        "details": "Screenshot saved to screenshots/error_20250831_200016.png"
+        "timestamp": "2025-08-31T20:45:32.534400",
+        "details": "Searching for 'spielzeug' (attempt 2)"
     },
     {
-        "step": "Error Handling",
-        "status": "critical",
-        "timestamp": "2025-08-31T20:00:16.465226",
-        "details": "Maximum retries reached. Aborting."
+        "step": "Wishlist",
+        "status": "info",
+        "timestamp": "2025-08-31T20:45:37.367811",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Wishlist",
+        "status": "info",
+        "timestamp": "2025-08-31T20:45:37.399859",
+        "details": "Navigating to product page: https://www.amazon.de/Eichhorn-100002240-Klangbaus..."
+    },
+    {
+        "step": "Wishlist",
+        "status": "success",
+        "timestamp": "2025-08-31T20:45:46.189312",
+        "details": "Added product 2/2 to wishlist."
+    },
+    {
+        "step": "Wishlist",
+        "status": "success",
+        "timestamp": "2025-08-31T20:45:46.189388",
+        "details": "Successfully added 2 products to wishlist."
+    },
+    {
+        "step": "Prime Cancellation",
+        "status": "info",
+        "timestamp": "2025-08-31T20:45:46.189410",
+        "details": "Checking for active Prime membership."
+    },
+    {
+        "step": "Prime Cancellation",
+        "status": "info",
+        "timestamp": "2025-08-31T20:45:47.845609",
+        "details": "No active Prime membership or cancellation option found."
+    },
+    {
+        "step": "Session",
+        "status": "success",
+        "timestamp": "2025-08-31T20:45:48.160922",
+        "details": "Session state saved to sessions/tobiashenschel7.json"
+    },
+    {
+        "step": "Completion",
+        "status": "success",
+        "timestamp": "2025-08-31T20:45:48.160942",
+        "details": "Automation script finished successfully."
     }
 ]

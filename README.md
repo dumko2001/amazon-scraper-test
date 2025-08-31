@@ -61,6 +61,7 @@ The script includes pre-configured:
 ```bash
 python main.py
 ```
+source venv/bin/activate && rm -f sessions/*.json && python main_v2.py
 
 The script will:
 1. Select a random account and proxy from the configured lists
@@ -110,4 +111,4 @@ Status levels: `info`, `success`, `warning`, `error`, `critical`
 
 ## Development Time
 
-Estimated development time: 4-5 hours including testing and documentation.
+Estimated development time: 2 hours including testing and documentation.
