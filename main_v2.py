@@ -260,9 +260,9 @@ def browse_random_products(page: Page, num_products=5):
             if product_links and product_links.count() > 0:
                 # Get URLs from the first 10 results
                 all_hrefs = []
-                for i in range(min(10, product_links.count())):
+                for j in range(min(10, product_links.count())):
                     try:
-                        href = product_links.nth(i).get_attribute('href')
+                        href = product_links.nth(j).get_attribute('href')
                         if href and '/dp/' in href:
                             all_hrefs.append(href)
                     except Exception:
@@ -346,9 +346,9 @@ def add_products_to_wishlist(page: Page, num_to_add=2):
             if product_links and product_links.count() > 0:
                 # Get URLs from the first 5 results
                 all_hrefs = []
-                for i in range(min(5, product_links.count())):
+                for j in range(min(5, product_links.count())):
                     try:
-                        href = product_links.nth(i).get_attribute('href')
+                        href = product_links.nth(j).get_attribute('href')
                         if href and '/dp/' in href:
                             all_hrefs.append(href)
                     except Exception:
@@ -462,6 +462,7 @@ def run_automation():
                     timezone_id="Europe/Berlin"
                 )
                 page = context.new_page()
+                
                 stealth_sync(page) # Apply stealth measures
 
                 # --- EXECUTE TASKS ---

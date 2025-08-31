@@ -2,235 +2,235 @@
     {
         "step": "Setup",
         "status": "info",
-        "timestamp": "2025-08-31T20:43:31.552410",
-        "details": "Using account: tobiashenschel7@gmail.com, proxy: http://res.proxy-seller.com:10123"
+        "timestamp": "2025-08-31T21:05:56.461412",
+        "details": "Using account: tobiashenschel7@gmail.com, proxy: http://res.proxy-seller.com:10124"
     },
     {
         "step": "Login",
         "status": "info",
-        "timestamp": "2025-08-31T20:43:33.723134",
+        "timestamp": "2025-08-31T21:05:58.822258",
         "details": "Navigating to Amazon.de for tobiashenschel7@gmail.com"
     },
     {
         "step": "Login",
         "status": "success",
-        "timestamp": "2025-08-31T20:43:41.155155",
+        "timestamp": "2025-08-31T21:06:05.565286",
         "details": "Already logged in from a previous session."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:43:41.155198",
+        "timestamp": "2025-08-31T21:06:05.565321",
         "details": "Starting to browse 5 random products."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:43:41.155224",
+        "timestamp": "2025-08-31T21:06:05.565339",
         "details": "Searching for 'angebote' (product 1/5)"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:43:46.159849",
+        "timestamp": "2025-08-31T21:06:11.206220",
         "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:43:46.216014",
+        "timestamp": "2025-08-31T21:06:11.276760",
         "details": "Navigating to product page: https://www.amazon.de/INIU-Schnellladekabel-Gefloc..."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T20:43:57.678573",
-        "details": "Successfully browsed product 10/5."
+        "timestamp": "2025-08-31T21:06:23.541749",
+        "details": "Successfully browsed product 1/5."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:43:57.678653",
-        "details": "Searching for 'b\u00fccher' (product 2/5)"
+        "timestamp": "2025-08-31T21:06:23.541963",
+        "details": "Searching for 'angebote' (product 2/5)"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:04.251113",
+        "timestamp": "2025-08-31T21:06:34.051810",
         "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:04.315064",
-        "details": "Navigating to product page: https://www.amazon.de/22-Bahnen-Lieblingsbuch-unab..."
+        "timestamp": "2025-08-31T21:06:34.142132",
+        "details": "Navigating to product page: https://www.amazon.de/JACK-JONES-Herren-Jjestar-T-..."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T20:44:15.464759",
-        "details": "Successfully browsed product 10/5."
+        "timestamp": "2025-08-31T21:06:47.099993",
+        "details": "Successfully browsed product 2/5."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:15.465055",
-        "details": "Searching for 'b\u00fccher' (product 3/5)"
+        "timestamp": "2025-08-31T21:06:47.100147",
+        "details": "Searching for 'geschenke' (product 3/5)"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:22.436881",
+        "timestamp": "2025-08-31T21:06:56.425926",
         "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:22.476375",
-        "details": "Navigating to product page: https://www.amazon.de/viel-gedacht-wenig-gelebt-ve..."
+        "timestamp": "2025-08-31T21:06:56.480472",
+        "details": "Navigating to product page: https://www.amazon.de/Fisher-Price-FXC66-beruhigen..."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T20:44:35.182630",
-        "details": "Successfully browsed product 10/5."
+        "timestamp": "2025-08-31T21:07:07.575301",
+        "details": "Successfully browsed product 3/5."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:35.182768",
+        "timestamp": "2025-08-31T21:07:07.577050",
         "details": "Searching for 'bestseller' (product 4/5)"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:43.310313",
+        "timestamp": "2025-08-31T21:07:12.966397",
         "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:43.352283",
-        "details": "Navigating to product page: https://www.amazon.de/Unser-Tag-ist-heute-Aufricht..."
+        "timestamp": "2025-08-31T21:07:13.007139",
+        "details": "Navigating to product page: https://www.amazon.de/Audible-Unser-Tag-ist-heute/..."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T20:44:56.832458",
-        "details": "Successfully browsed product 10/5."
+        "timestamp": "2025-08-31T21:07:23.886719",
+        "details": "Successfully browsed product 4/5."
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:44:56.832850",
-        "details": "Searching for 'elektronik' (product 5/5)"
+        "timestamp": "2025-08-31T21:07:23.889113",
+        "details": "Searching for 'b\u00fccher' (product 5/5)"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:03.607482",
+        "timestamp": "2025-08-31T21:07:33.782232",
         "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Browsing",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:03.656095",
-        "details": "Navigating to product page: https://www.amazon.de/Elektronik-f%C3%BCr-Dummies-..."
+        "timestamp": "2025-08-31T21:07:33.818719",
+        "details": "Navigating to product page: https://www.amazon.de/22-Bahnen-Lieblingsbuch-unab..."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T20:45:16.638212",
-        "details": "Successfully browsed product 10/5."
+        "timestamp": "2025-08-31T21:07:44.260523",
+        "details": "Successfully browsed product 5/5."
     },
     {
         "step": "Browsing",
         "status": "success",
-        "timestamp": "2025-08-31T20:45:16.638291",
+        "timestamp": "2025-08-31T21:07:44.260651",
         "details": "Finished browsing products."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:16.638463",
+        "timestamp": "2025-08-31T21:07:44.260694",
         "details": "Attempting to add 2 products to wishlist."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:16.638514",
+        "timestamp": "2025-08-31T21:07:44.260729",
         "details": "Searching for 'elektronik' (attempt 1)"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:23.185730",
+        "timestamp": "2025-08-31T21:07:51.405031",
         "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:23.214936",
+        "timestamp": "2025-08-31T21:07:51.427615",
         "details": "Navigating to product page: https://www.amazon.de/Elektronik-f%C3%BCr-Dummies-..."
     },
     {
         "step": "Wishlist",
         "status": "success",
-        "timestamp": "2025-08-31T20:45:32.534326",
+        "timestamp": "2025-08-31T21:08:00.804665",
         "details": "Added product 1/2 to wishlist."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:32.534400",
+        "timestamp": "2025-08-31T21:08:00.804758",
         "details": "Searching for 'spielzeug' (attempt 2)"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:37.367811",
+        "timestamp": "2025-08-31T21:08:08.432543",
         "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:37.399859",
+        "timestamp": "2025-08-31T21:08:08.466281",
         "details": "Navigating to product page: https://www.amazon.de/Eichhorn-100002240-Klangbaus..."
     },
     {
         "step": "Wishlist",
         "status": "success",
-        "timestamp": "2025-08-31T20:45:46.189312",
+        "timestamp": "2025-08-31T21:08:18.272061",
         "details": "Added product 2/2 to wishlist."
     },
     {
         "step": "Wishlist",
         "status": "success",
-        "timestamp": "2025-08-31T20:45:46.189388",
+        "timestamp": "2025-08-31T21:08:18.272134",
         "details": "Successfully added 2 products to wishlist."
     },
     {
         "step": "Prime Cancellation",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:46.189410",
+        "timestamp": "2025-08-31T21:08:18.272160",
         "details": "Checking for active Prime membership."
     },
     {
         "step": "Prime Cancellation",
         "status": "info",
-        "timestamp": "2025-08-31T20:45:47.845609",
+        "timestamp": "2025-08-31T21:08:20.369905",
         "details": "No active Prime membership or cancellation option found."
     },
     {
         "step": "Session",
         "status": "success",
-        "timestamp": "2025-08-31T20:45:48.160922",
+        "timestamp": "2025-08-31T21:08:20.931919",
         "details": "Session state saved to sessions/tobiashenschel7.json"
     },
     {
         "step": "Completion",
         "status": "success",
-        "timestamp": "2025-08-31T20:45:48.160942",
+        "timestamp": "2025-08-31T21:08:20.931945",
         "details": "Automation script finished successfully."
     }
 ]
