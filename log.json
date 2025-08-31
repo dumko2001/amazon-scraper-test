@@ -1,0 +1,236 @@
+[
+    {
+        "step": "Setup",
+        "status": "info",
+        "timestamp": "2025-08-31T19:52:33.261672",
+        "details": "Using account: niklasdornberger@gmail.com and proxy: http://res.proxy-seller.com:10125"
+    },
+    {
+        "step": "Login",
+        "status": "info",
+        "timestamp": "2025-08-31T19:52:35.459177",
+        "details": "Navigating to Amazon.de for niklasdornberger@gmail.com"
+    },
+    {
+        "step": "Login",
+        "status": "success",
+        "timestamp": "2025-08-31T19:52:52.229428",
+        "details": "Already logged in from previous session"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:52:52.229474",
+        "details": "Starting to browse 5 random products"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:52:52.229492",
+        "details": "Browsing product 1/5: angebote"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:53:20.351019",
+        "details": "Successfully browsed product 1/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:53:20.351226",
+        "details": "Browsing product 2/5: elektronik"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:53:55.846437",
+        "details": "Successfully browsed product 2/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:53:55.846807",
+        "details": "Browsing product 3/5: angebote"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:54:26.114753",
+        "details": "Successfully browsed product 3/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:54:26.114982",
+        "details": "Browsing product 4/5: angebote"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:54:45.837893",
+        "details": "Successfully browsed product 4/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:54:45.838049",
+        "details": "Browsing product 5/5: angebote"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:55:10.435347",
+        "details": "Successfully browsed product 5/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:55:10.435543",
+        "details": "Finished browsing products"
+    },
+    {
+        "step": "Wishlist",
+        "status": "info",
+        "timestamp": "2025-08-31T19:55:10.435579",
+        "details": "Attempting to add 2 products to wishlist"
+    },
+    {
+        "step": "Wishlist",
+        "status": "info",
+        "timestamp": "2025-08-31T19:56:01.154395",
+        "details": "No wishlist button found on this page, trying another product"
+    },
+    {
+        "step": "Error",
+        "status": "critical",
+        "timestamp": "2025-08-31T19:56:01.160397",
+        "details": "An error occurred: ElementHandle.get_attribute: Execution context was destroyed, most likely because of a navigation"
+    },
+    {
+        "step": "Error Handling",
+        "status": "info",
+        "timestamp": "2025-08-31T19:56:01.871173",
+        "details": "Screenshot saved to screenshots/error_20250831_195601.png"
+    },
+    {
+        "step": "Error Handling",
+        "status": "warning",
+        "timestamp": "2025-08-31T19:56:01.871198",
+        "details": "Retrying... (Attempt 1/1)"
+    },
+    {
+        "step": "Login",
+        "status": "info",
+        "timestamp": "2025-08-31T19:56:12.825142",
+        "details": "Navigating to Amazon.de for niklasdornberger@gmail.com"
+    },
+    {
+        "step": "Login",
+        "status": "success",
+        "timestamp": "2025-08-31T19:56:28.982989",
+        "details": "Already logged in from previous session"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:56:28.983054",
+        "details": "Starting to browse 5 random products"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:56:28.983072",
+        "details": "Browsing product 1/5: bestseller"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:57:02.985406",
+        "details": "Successfully browsed product 1/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:57:02.985612",
+        "details": "Browsing product 2/5: angebote"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:57:27.876726",
+        "details": "Successfully browsed product 2/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:57:27.876893",
+        "details": "Browsing product 3/5: kleidung"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:58:23.816954",
+        "details": "Successfully browsed product 3/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:58:23.819590",
+        "details": "Browsing product 4/5: kleidung"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:59:00.161270",
+        "details": "Successfully browsed product 4/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T19:59:00.161887",
+        "details": "Browsing product 5/5: angebote"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:59:28.252789",
+        "details": "Successfully browsed product 5/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T19:59:28.252913",
+        "details": "Finished browsing products"
+    },
+    {
+        "step": "Wishlist",
+        "status": "info",
+        "timestamp": "2025-08-31T19:59:28.252941",
+        "details": "Attempting to add 2 products to wishlist"
+    },
+    {
+        "step": "Wishlist",
+        "status": "info",
+        "timestamp": "2025-08-31T20:00:16.260608",
+        "details": "No wishlist button found on this page, trying another product"
+    },
+    {
+        "step": "Error",
+        "status": "critical",
+        "timestamp": "2025-08-31T20:00:16.264445",
+        "details": "An error occurred: ElementHandle.get_attribute: Execution context was destroyed, most likely because of a navigation"
+    },
+    {
+        "step": "Error Handling",
+        "status": "info",
+        "timestamp": "2025-08-31T20:00:16.465202",
+        "details": "Screenshot saved to screenshots/error_20250831_200016.png"
+    },
+    {
+        "step": "Error Handling",
+        "status": "critical",
+        "timestamp": "2025-08-31T20:00:16.465226",
+        "details": "Maximum retries reached. Aborting."
+    }
+]
