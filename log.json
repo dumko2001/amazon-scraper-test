@@ -2,73 +2,235 @@
     {
         "step": "Setup",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:14.859975",
+        "timestamp": "2025-08-31T23:08:59.846759",
         "details": "Using account: niklasdornberger@gmail.com, proxy: http://res.proxy-seller.com:10127"
     },
     {
         "step": "Login",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:16.474289",
+        "timestamp": "2025-08-31T23:09:00.988304",
         "details": "Navigating to Amazon.de for niklasdornberger@gmail.com"
     },
     {
         "step": "Login",
         "status": "success",
-        "timestamp": "2025-08-31T22:42:21.344758",
-        "details": "Already logged in using a valid session."
+        "timestamp": "2025-08-31T23:09:08.750044",
+        "details": "Already logged in from a previous session."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:09:08.750129",
+        "details": "Starting to browse 5 random products."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:09:08.750160",
+        "details": "Searching for 'bestseller' (product 1/5)"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:09:19.382791",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:09:19.454468",
+        "details": "Navigating to product page: https://www.amazon.de/Audible-Unser-Tag-ist-heute/..."
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T23:09:38.635628",
+        "details": "Successfully browsed product 1/5."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:09:38.635840",
+        "details": "Searching for 'kleidung' (product 2/5)"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:09:56.629458",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:09:56.692286",
+        "details": "Navigating to product page: https://www.amazon.de/SINOPHANT-Leggings-Superweic..."
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T23:10:21.733216",
+        "details": "Successfully browsed product 2/5."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:10:21.733310",
+        "details": "Searching for 'bestseller' (product 3/5)"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:10:34.816663",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:10:34.866889",
+        "details": "Navigating to product page: https://www.amazon.de/Unser-Tag-ist-heute-Aufricht..."
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T23:10:51.657730",
+        "details": "Successfully browsed product 3/5."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:10:51.658080",
+        "details": "Searching for 'angebote' (product 4/5)"
+    },
+    {
+        "step": "Browsing",
+        "status": "warning",
+        "timestamp": "2025-08-31T23:11:08.019150",
+        "details": "No product links found for 'angebote'. Trying alternative approach."
+    },
+    {
+        "step": "Browsing",
+        "status": "warning",
+        "timestamp": "2025-08-31T23:11:19.325987",
+        "details": "No product links found for 'angebote'. Skipping."
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:11:19.326080",
+        "details": "Searching for 'geschenke' (product 5/5)"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:11:30.641578",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-08-31T23:11:30.732029",
+        "details": "Navigating to product page: https://aax-eu.amazon.de/x/c/JFq2J65shftfwPgoWJYr4..."
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T23:11:44.050394",
+        "details": "Successfully browsed product 5/5."
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-08-31T23:11:44.050461",
+        "details": "Finished browsing products."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:21.344788",
-        "details": "Starting direct URL wishlist task."
+        "timestamp": "2025-08-31T23:11:44.050477",
+        "details": "Attempting to add 2 products to wishlist."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:21.344796",
-        "details": "Processing product 1/2: https://www.amazon.de/dp/B08P265T23"
+        "timestamp": "2025-08-31T23:11:44.050491",
+        "details": "Searching for 'geschenke' (attempt 1)"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:22.065416",
-        "details": "Waiting for page to be fully interactive..."
-    },
-    {
-        "step": "Wishlist",
-        "status": "error",
-        "timestamp": "2025-08-31T22:42:33.701702",
-        "details": "Failed to add product 1: Page.wait_for_selector: Target page, context or browser has been closed\nCall log:\nwaiting for locator(\"#buybox, #rightCol\") to be visible\n"
+        "timestamp": "2025-08-31T23:11:54.324040",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:33.701767",
-        "details": "Processing product 2/2: https://www.amazon.de/dp/3836294459"
+        "timestamp": "2025-08-31T23:11:54.356662",
+        "details": "Navigating to product page: https://aax-eu.amazon.de/x/c/JM-9w25_kGPVBlwluHDhk..."
     },
     {
         "step": "Wishlist",
-        "status": "error",
-        "timestamp": "2025-08-31T22:42:33.704199",
-        "details": "Failed to add product 2: Page.goto: Target page, context or browser has been closed"
+        "status": "success",
+        "timestamp": "2025-08-31T23:12:10.465449",
+        "details": "Added product 1/2 to wishlist."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:33.704236",
-        "details": "Finished task. Successfully added 0/2 products."
+        "timestamp": "2025-08-31T23:12:10.465533",
+        "details": "Searching for 'mode' (attempt 2)"
+    },
+    {
+        "step": "Wishlist",
+        "status": "info",
+        "timestamp": "2025-08-31T23:12:21.794574",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Wishlist",
+        "status": "info",
+        "timestamp": "2025-08-31T23:12:21.834883",
+        "details": "Navigating to product page: https://www.amazon.de/SINOPHANT-Leggings-Superweic..."
+    },
+    {
+        "step": "Wishlist",
+        "status": "success",
+        "timestamp": "2025-08-31T23:12:37.385233",
+        "details": "Added product 2/2 to wishlist."
+    },
+    {
+        "step": "Wishlist",
+        "status": "success",
+        "timestamp": "2025-08-31T23:12:37.385306",
+        "details": "Successfully added 2 products to wishlist."
+    },
+    {
+        "step": "Prime Cancellation",
+        "status": "info",
+        "timestamp": "2025-08-31T23:12:37.385331",
+        "details": "Checking for active Prime membership."
+    },
+    {
+        "step": "Prime Cancellation",
+        "status": "info",
+        "timestamp": "2025-08-31T23:12:47.919607",
+        "details": "Active Prime membership found. Attempting to cancel."
+    },
+    {
+        "step": "Prime Cancellation",
+        "status": "success",
+        "timestamp": "2025-08-31T23:12:52.193621",
+        "details": "Clicked the cancel Prime button. Process initiated."
+    },
+    {
+        "step": "Session",
+        "status": "success",
+        "timestamp": "2025-08-31T23:12:52.414517",
+        "details": "Session state saved to sessions/niklasdornberger.json"
     },
     {
         "step": "Completion",
         "status": "success",
-        "timestamp": "2025-08-31T22:42:33.931860",
-        "details": "Script finished."
-    },
-    {
-        "step": "Teardown",
-        "status": "info",
-        "timestamp": "2025-08-31T22:42:33.931883",
-        "details": "Closing browser."
+        "timestamp": "2025-08-31T23:12:52.414593",
+        "details": "Automation script finished successfully."
     }
 ]
