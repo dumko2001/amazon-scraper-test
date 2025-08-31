@@ -2,241 +2,73 @@
     {
         "step": "Setup",
         "status": "info",
-        "timestamp": "2025-08-31T21:29:13.427996",
-        "details": "Using account: niklasdornberger@gmail.com, proxy: http://res.proxy-seller.com:10124"
+        "timestamp": "2025-08-31T22:42:14.859975",
+        "details": "Using account: niklasdornberger@gmail.com, proxy: http://res.proxy-seller.com:10127"
     },
     {
         "step": "Login",
         "status": "info",
-        "timestamp": "2025-08-31T21:29:14.556611",
+        "timestamp": "2025-08-31T22:42:16.474289",
         "details": "Navigating to Amazon.de for niklasdornberger@gmail.com"
     },
     {
         "step": "Login",
         "status": "success",
-        "timestamp": "2025-08-31T21:29:20.155591",
-        "details": "Already logged in from a previous session."
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:29:20.155620",
-        "details": "Starting to browse 5 random products."
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:29:20.155644",
-        "details": "Searching for 'elektronik' (product 1/5)"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:29:26.653092",
-        "details": "Found products using selector: a[href*=\"/dp/\"]"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:29:26.719581",
-        "details": "Navigating to product page: https://www.amazon.de/dp/B0CX8MQF7R?pd_rd_w=fYjIf&..."
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T21:29:39.121573",
-        "details": "Successfully browsed product 1/5."
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:29:39.121956",
-        "details": "Searching for 'elektronik' (product 2/5)"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:29:44.570442",
-        "details": "Found products using selector: a[href*=\"/dp/\"]"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:29:44.626910",
-        "details": "Navigating to product page: https://www.amazon.de/dp/B0CFPXBJ9Y?pd_rd_w=O0pKC&..."
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T21:29:56.605275",
-        "details": "Successfully browsed product 2/5."
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:29:56.605504",
-        "details": "Searching for 'elektronik' (product 3/5)"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:30:03.939774",
-        "details": "Found products using selector: a[href*=\"/dp/\"]"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:30:04.109463",
-        "details": "Navigating to product page: https://www.amazon.de/dp/B0CFPXBJ9Y?pd_rd_w=UxIE3&..."
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T21:30:13.922262",
-        "details": "Successfully browsed product 3/5."
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:30:13.922438",
-        "details": "Searching for 'geschenke' (product 4/5)"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:30:23.405499",
-        "details": "Found products using selector: a[href*=\"/dp/\"]"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:30:23.478757",
-        "details": "Navigating to product page: https://aax-eu.amazon.de/x/c/JEofAhhJiL3BXUSnqQNdh..."
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T21:30:40.565261",
-        "details": "Successfully browsed product 4/5."
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:30:40.565522",
-        "details": "Searching for 'angebote' (product 5/5)"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:30:48.691191",
-        "details": "Found products using selector: a[href*=\"/dp/\"]"
-    },
-    {
-        "step": "Browsing",
-        "status": "info",
-        "timestamp": "2025-08-31T21:30:48.769350",
-        "details": "Navigating to product page: https://www.amazon.de/JACK-JONES-Herren-Jjestar-T-..."
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T21:30:57.577846",
-        "details": "Successfully browsed product 5/5."
-    },
-    {
-        "step": "Browsing",
-        "status": "success",
-        "timestamp": "2025-08-31T21:30:57.578010",
-        "details": "Finished browsing products."
+        "timestamp": "2025-08-31T22:42:21.344758",
+        "details": "Already logged in using a valid session."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T21:30:57.578045",
-        "details": "Attempting to add 2 products to wishlist."
+        "timestamp": "2025-08-31T22:42:21.344788",
+        "details": "Starting direct URL wishlist task."
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T21:30:57.578094",
-        "details": "Searching for 'elektronik' (attempt 1)"
+        "timestamp": "2025-08-31T22:42:21.344796",
+        "details": "Processing product 1/2: https://www.amazon.de/dp/B08P265T23"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T21:31:04.070166",
-        "details": "Found products using selector: a[href*=\"/dp/\"]"
+        "timestamp": "2025-08-31T22:42:22.065416",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Wishlist",
+        "status": "error",
+        "timestamp": "2025-08-31T22:42:33.701702",
+        "details": "Failed to add product 1: Page.wait_for_selector: Target page, context or browser has been closed\nCall log:\nwaiting for locator(\"#buybox, #rightCol\") to be visible\n"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T21:31:04.102226",
-        "details": "Navigating to product page: https://www.amazon.de/dp/B0CX8MQF7R?pd_rd_w=Cn9bC&..."
+        "timestamp": "2025-08-31T22:42:33.701767",
+        "details": "Processing product 2/2: https://www.amazon.de/dp/3836294459"
     },
     {
         "step": "Wishlist",
-        "status": "success",
-        "timestamp": "2025-08-31T21:31:11.156663",
-        "details": "Added product 1/2 to wishlist."
-    },
-    {
-        "step": "Wishlist",
-        "status": "info",
-        "timestamp": "2025-08-31T21:31:11.156754",
-        "details": "Searching for 'b\u00fccher' (attempt 2)"
+        "status": "error",
+        "timestamp": "2025-08-31T22:42:33.704199",
+        "details": "Failed to add product 2: Page.goto: Target page, context or browser has been closed"
     },
     {
         "step": "Wishlist",
         "status": "info",
-        "timestamp": "2025-08-31T21:31:16.979403",
-        "details": "Found products using selector: a[href*=\"/dp/\"]"
-    },
-    {
-        "step": "Wishlist",
-        "status": "info",
-        "timestamp": "2025-08-31T21:31:16.999710",
-        "details": "Navigating to product page: https://www.amazon.de/viel-gedacht-wenig-gelebt-ve..."
-    },
-    {
-        "step": "Wishlist",
-        "status": "success",
-        "timestamp": "2025-08-31T21:31:27.556337",
-        "details": "Added product 2/2 to wishlist."
-    },
-    {
-        "step": "Wishlist",
-        "status": "success",
-        "timestamp": "2025-08-31T21:31:27.556402",
-        "details": "Successfully added 2 products to wishlist."
-    },
-    {
-        "step": "Prime Cancellation",
-        "status": "info",
-        "timestamp": "2025-08-31T21:31:27.556421",
-        "details": "Checking for active Prime membership."
-    },
-    {
-        "step": "Prime Cancellation",
-        "status": "info",
-        "timestamp": "2025-08-31T21:31:30.211052",
-        "details": "Active Prime membership found. Attempting to cancel."
-    },
-    {
-        "step": "Prime Cancellation",
-        "status": "success",
-        "timestamp": "2025-08-31T21:31:31.907005",
-        "details": "Clicked the cancel Prime button. Process initiated."
-    },
-    {
-        "step": "Session",
-        "status": "success",
-        "timestamp": "2025-08-31T21:31:32.045650",
-        "details": "Session state saved to sessions/niklasdornberger.json"
+        "timestamp": "2025-08-31T22:42:33.704236",
+        "details": "Finished task. Successfully added 0/2 products."
     },
     {
         "step": "Completion",
         "status": "success",
-        "timestamp": "2025-08-31T21:31:32.045672",
-        "details": "Automation script finished successfully."
+        "timestamp": "2025-08-31T22:42:33.931860",
+        "details": "Script finished."
+    },
+    {
+        "step": "Teardown",
+        "status": "info",
+        "timestamp": "2025-08-31T22:42:33.931883",
+        "details": "Closing browser."
     }
 ]
