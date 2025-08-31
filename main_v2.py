@@ -103,6 +103,106 @@ def handle_popups(page: Page, action: str):
         except Exception:
             pass # Ignore errors if the button disappears before click
 
+def is_logged_in(page: Page) -> bool:
+    """Check if user is currently logged in to Amazon."""
+    login_indicators = [
+        '#nav-link-accountList-nav-line-1:has-text("Hallo")',
+        '#nav-link-accountList:has-text("Hallo")',
+        'input#twotabsearchtextbox'  # Search box indicates we're on main page and likely logged in
+    ]
+
+    # Check if we see a login form (indicates we're NOT logged in)
+    login_form_indicators = [
+        'input[name="email"]',
+        'input#ap_email',
+        'input[name="password"]',
+        'input#ap_password',
+        'h1:has-text("Anmelden")',
+        'h1:has-text("Sign In")'
+    ]
+
+    # If we see login forms, we're definitely not logged in
+    for indicator in login_form_indicators:
+        if page.locator(indicator).is_visible(timeout=2000):
+            return False
+
+    # If we see logged-in indicators, we're logged in
+    for indicator in login_indicators:
+        if page.locator(indicator).is_visible(timeout=3000):
+            return True
+
+    return False
+
+def relogin_and_return(page: Page, email: str, password: str, target_url: str) -> bool:
+    """
+    Attempts to perform a fresh login and then returns to a specified URL.
+    Returns True on success, False on failure.
+    """
+    log_step("Recovery", "warning", "Session lost. Attempting to re-login...")
+    try:
+        # Go directly to the sign-in page for a clean login attempt
+        page.goto(f"{AMAZON_URL}ap/signin", timeout=60000, wait_until='domcontentloaded')
+        human_like_delay(2, 3)
+
+        # Perform the core login sequence
+        email_selectors = [
+            'input[name="email"]',
+            'input#ap_email',
+            'input[type="email"]',
+            'input[autocomplete="username"]'
+        ]
+        email_input = find_element_resilient(page, email_selectors, timeout=10000)
+        if not email_input:
+            log_step("Recovery", "error", "Could not find email input field during recovery.")
+            return False
+        email_input.fill(email)
+        human_like_delay(1, 2)
+
+        continue_selectors = ['input#continue', 'button#continue', 'input[type="submit"]']
+        continue_btn = find_element_resilient(page, continue_selectors)
+        if continue_btn:
+            continue_btn.click()
+            page.wait_for_load_state('domcontentloaded')
+            human_like_delay(2, 3)
+
+        password_selectors = [
+            'input[name="password"]',
+            'input#ap_password',
+            'input[type="password"]',
+            'input[autocomplete="current-password"]'
+        ]
+        password_input = find_element_resilient(page, password_selectors, timeout=10000)
+        if not password_input:
+            log_step("Recovery", "error", "Could not find password input field during recovery.")
+            return False
+        password_input.fill(password)
+        human_like_delay(1, 2)
+
+        signin_selectors = [
+            'input#signInSubmit',
+            'button#signInSubmit',
+            'input[type="submit"]',
+            'button:has-text("Anmelden")',
+            'button:has-text("Sign In")'
+        ]
+        signin_btn = find_element_resilient(page, signin_selectors)
+        if signin_btn:
+            signin_btn.click()
+
+        # Wait for confirmation that the login worked
+        page.wait_for_selector('input#twotabsearchtextbox', timeout=30000)
+        log_step("Recovery", "success", "Re-login successful.")
+
+        # IMPORTANT: Go back to the page we were on
+        log_step("Recovery", "info", f"Returning to target URL: {target_url[:60]}...")
+        page.goto(target_url, wait_until='domcontentloaded', timeout=60000)
+        human_like_delay(2, 3)
+        return True
+
+    except Exception as e:
+        log_step("Recovery", "critical", f"Re-login attempt failed: {str(e)}")
+        return False
+
 # --- CORE AUTOMATION LOGIC ---
 def login_to_amazon(page: Page, email: str, password: str):
     """Robust login function with session reuse and popup handling."""
@@ -123,6 +223,7 @@ def login_to_amazon(page: Page, email: str, password: str):
     if cookie_button:
         cookie_button.click()
         human_like_delay(1, 2)
+        log_step("Login", "info", "Accepted cookies")
 
     # Check if already logged in by looking for a personalized greeting.
     login_indicators = [
@@ -136,19 +237,22 @@ def login_to_amazon(page: Page, email: str, password: str):
             log_step("Login", "success", "Already logged in from a previous session.")
             return
 
-    # Click sign-in link with improved selectors
+    # Always click sign-in link to perform fresh login
+    log_step("Login", "info", "Looking for sign-in button to perform fresh login")
     signin_selectors = [
         'a[data-nav-role="signin"]',
         'a#nav-link-accountList',
         'a:has-text("Anmelden")',
         'a:has-text("Sign In")',
-        '[data-nav-ref="nav_signin"]'
+        '[data-nav-ref="nav_signin"]',
+        '#nav-signin-tooltip .nav-action-signin-button'
     ]
-    signin_link = find_element_resilient(page, signin_selectors)
+    signin_link = find_element_resilient(page, signin_selectors, timeout=10000)
     if not signin_link:
-        log_step("Login", "warning", "Sign-in link not found on homepage, navigating directly.")
+        log_step("Login", "info", "Sign-in link not found on homepage, navigating directly to login page.")
         page.goto(f"{AMAZON_URL}ap/signin", timeout=60000, wait_until='domcontentloaded')
     else:
+        log_step("Login", "info", "Found sign-in button, clicking it")
         signin_link.click()
 
     page.wait_for_load_state('domcontentloaded')
@@ -293,8 +397,8 @@ def browse_random_products(page: Page, num_products=5):
 
     log_step("Browsing", "success", "Finished browsing products.")
 
-def add_products_to_wishlist(page: Page, num_to_add=2):
-    """Adds products to wishlist using a multi-layered, highly resilient strategy with updated selectors."""
+def add_products_to_wishlist(page: Page, account: dict, num_to_add=2):
+    """Adds products to wishlist using a multi-layered, highly resilient strategy with updated selectors and recovery logic."""
     log_step("Wishlist", "info", f"Attempting to add {num_to_add} products to wishlist.")
     search_terms = ["geschenke", "elektronik", "bücher", "spielzeug", "küche", "mode"]
     added_count = 0
@@ -363,6 +467,23 @@ def add_products_to_wishlist(page: Page, num_to_add=2):
                         log_step("Wishlist", "info", f"Navigating to product page: {product_url[:50]}...")
                         page.goto(product_url, wait_until='domcontentloaded', timeout=60000)
                         page.wait_for_selector('#productTitle, #centerCol, #feature-bullets', timeout=20000)
+
+                        # <<< --- CRITICAL FIX WITH RECOVERY LOGIC --- >>>
+                        if not is_logged_in(page):
+                            # The session was lost. Attempt to recover it.
+                            current_email = account['email']
+                            current_password = account['password']
+
+                            relogin_successful = relogin_and_return(page, current_email, current_password, product_url)
+
+                            if not relogin_successful:
+                                # If the recovery itself fails, then we stop everything.
+                                log_step("Wishlist", "critical", "Session was lost and the re-login attempt failed. Aborting.")
+                                raise Exception("Session was lost and the re-login attempt failed. Aborting.")
+
+                            # If relogin was successful, the page is reloaded.
+                            # We continue to the next iteration of the loop to retry the action on the fresh page.
+                            log_step("Wishlist", "info", "Recovery successful. Retrying wishlist action on this product.")
 
                         # STRATEGY 1: Handle product variations (size, color, etc.)
                         variation_selectors = ['#variation_size_name .swatch-input', '#variation_color_name .swatch-input']
@@ -440,8 +561,9 @@ def run_automation():
     for directory in [SCREENSHOTS_DIR, SESSION_DIR]:
         if not os.path.exists(directory): os.makedirs(directory)
 
-    account = random.choice(ACCOUNTS)
-    proxy_config = random.choice(PROXIES)
+    # Use a specific account that worked before and a different proxy
+    account = ACCOUNTS[0]  # Use niklasdornberger@gmail.com which worked
+    proxy_config = PROXIES[1]  # Use a different proxy (10124 instead of random)
     session_file = os.path.join(SESSION_DIR, f"{account['email'].split('@')[0]}.json")
     log_step("Setup", "info", f"Using account: {account['email']}, proxy: {proxy_config['server']}")
 
@@ -468,7 +590,7 @@ def run_automation():
                 # --- EXECUTE TASKS ---
                 login_to_amazon(page, account['email'], account['password'])
                 browse_random_products(page, 5)
-                add_products_to_wishlist(page, 2)
+                add_products_to_wishlist(page, account, 2)
                 cancel_prime_if_active(page)
 
                 context.storage_state(path=session_file) # Save session on success
