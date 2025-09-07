@@ -6,10 +6,16 @@ import re
 from datetime import datetime
 from playwright.sync_api import sync_playwright, Page
 from playwright._impl._errors import TimeoutError as PlaywrightTimeoutError
-from playwright_stealth import stealth_sync
+try:
+    from playwright_stealth import Stealth
+    def stealth_sync(page):
+        stealth = Stealth()
+        stealth.apply_stealth_sync(page)
+except ImportError:
+    # Fallback if stealth is not available
+    def stealth_sync(page):
+        pass
 
-# FINAL COMPLETE AMAZON AUTOMATION SOLUTION
-# Combines: Perfect Wishlist Creation + Working Product Browsing + Perfect Product Addition
 
 AMAZON_URL = "https://www.amazon.de/"
 ACCOUNT = {"email": "niklasdornberger@gmail.com", "password": "zappy3r@!"}
@@ -48,17 +54,90 @@ def log_step(step, status, details=""):
     LOGS.append(log_entry)
 
 def human_delay(min_sec=2, max_sec=4):
+    """Basic human delay with random variation."""
     time.sleep(random.uniform(min_sec, max_sec))
 
 def human_like_delay(min_sec=1, max_sec=3):
-    """Waits for a random duration to mimic human behavior."""
+    """Enhanced human-like delay with micro-pauses."""
+    # Add occasional micro-pauses to simulate thinking
+    if random.random() < 0.3:  # 30% chance of micro-pause
+        time.sleep(random.uniform(0.1, 0.3))
     time.sleep(random.uniform(min_sec, max_sec))
 
 def human_like_scroll(page: Page):
-    """Scrolls the page in a more human-like way."""
-    for _ in range(random.randint(2, 5)):
-        page.mouse.wheel(0, random.randint(300, 600))
-        human_like_delay(0.5, 1.5)
+    """Enhanced human-like scrolling with realistic patterns."""
+    scroll_count = random.randint(2, 5)
+    for i in range(scroll_count):
+        # Vary scroll distance and speed
+        scroll_distance = random.randint(200, 800)
+
+        # Sometimes scroll up a bit (like humans do)
+        if random.random() < 0.2:  # 20% chance
+            scroll_distance = -random.randint(100, 300)
+
+        page.mouse.wheel(0, scroll_distance)
+
+        # Variable pause between scrolls
+        pause_time = random.uniform(0.3, 2.0)
+        if i == scroll_count - 1:  # Longer pause after last scroll
+            pause_time = random.uniform(1.0, 3.0)
+
+        time.sleep(pause_time)
+
+def human_like_mouse_movement(page: Page, element):
+    """Simulate human-like mouse movement before clicking."""
+    try:
+        # Get element position
+        box = element.bounding_box()
+        if box:
+            # Move to a random point near the element first
+            near_x = box['x'] + random.randint(-50, 50)
+            near_y = box['y'] + random.randint(-50, 50)
+
+            # Move near the element
+            page.mouse.move(near_x, near_y)
+            time.sleep(random.uniform(0.1, 0.3))
+
+            # Move to the element center with slight randomness
+            target_x = box['x'] + box['width'] / 2 + random.randint(-5, 5)
+            target_y = box['y'] + box['height'] / 2 + random.randint(-5, 5)
+
+            page.mouse.move(target_x, target_y)
+            time.sleep(random.uniform(0.1, 0.5))
+    except:
+        pass  # If mouse movement fails, continue without it
+
+def human_like_typing(page: Page, element, text: str):
+    """Simulate human-like typing with realistic patterns."""
+    try:
+        element.click()  # Focus the element
+        time.sleep(random.uniform(0.2, 0.5))
+
+        # Clear existing text
+        element.fill("")
+        time.sleep(random.uniform(0.1, 0.3))
+
+        # Type character by character with human-like timing
+        for i, char in enumerate(text):
+            element.type(char)
+
+            # Variable typing speed
+            if char == ' ':  # Longer pause after spaces
+                delay = random.uniform(0.1, 0.3)
+            elif char in '.,!?':  # Pause after punctuation
+                delay = random.uniform(0.2, 0.4)
+            else:
+                delay = random.uniform(0.05, 0.15)
+
+            # Occasional longer pauses (thinking)
+            if random.random() < 0.1:  # 10% chance
+                delay += random.uniform(0.3, 0.8)
+
+            time.sleep(delay)
+
+    except:
+        # Fallback to regular fill if typing fails
+        element.fill(text)
 
 def take_screenshot(page: Page, name: str):
     try:
@@ -119,10 +198,10 @@ def create_wishlist_PERFECT(page: Page, wishlist_name: str):
             log_step("Wishlist Creation", "error", "Name input not found")
             return False
         
-        # Enter wishlist name
+        # Enter wishlist name with human-like typing
         log_step("Wishlist Creation", "info", "Entering wishlist name...")
-        name_input.clear()
-        name_input.fill(wishlist_name)
+        human_like_mouse_movement(page, name_input)
+        human_like_typing(page, name_input, wishlist_name)
         human_delay(1, 2)
         take_screenshot(page, "after_name_entered")
         
@@ -134,10 +213,12 @@ def create_wishlist_PERFECT(page: Page, wishlist_name: str):
             log_step("Wishlist Creation", "error", "Submit button not found")
             return False
         
-        # Click submit button
+        # Click submit button with human-like behavior
         log_step("Wishlist Creation", "info", "Clicking 'Erstellen' button...")
+        human_like_mouse_movement(page, submit_button)
+        human_like_delay(0.3, 0.8)  # Brief pause before clicking
         submit_button.click()
-        log_step("Wishlist Creation", "success", "Normal click successful")
+        log_step("Wishlist Creation", "success", "Human-like click successful")
         human_delay(3, 5)
         take_screenshot(page, "after_submit_click")
         
@@ -479,20 +560,54 @@ def run_FINAL_COMPLETE_automation():
                 headless=False,
                 proxy=proxy_config,
                 args=[
+                    # Enhanced stealth arguments
                     '--disable-blink-features=AutomationControlled',
                     '--disable-web-security',
-                    '--disable-features=VizDisplayCompositor'
+                    '--disable-features=VizDisplayCompositor',
+                    '--disable-dev-shm-usage',
+                    '--no-sandbox',
+                    '--disable-setuid-sandbox',
+                    '--disable-background-timer-throttling',
+                    '--disable-backgrounding-occluded-windows',
+                    '--disable-renderer-backgrounding',
+                    '--disable-features=TranslateUI',
+                    '--disable-ipc-flooding-protection',
+                    '--disable-hang-monitor',
+                    '--disable-client-side-phishing-detection',
+                    '--disable-component-update',
+                    '--no-default-browser-check',
+                    '--no-first-run',
+                    '--disable-default-apps',
+                    '--disable-popup-blocking',
+                    '--disable-prompt-on-repost',
+                    '--disable-sync',
+                    '--metrics-recording-only',
+                    '--no-report-upload',
+                    '--disable-background-networking'
                 ]
             )
 
+            # Enhanced context with more realistic settings
             context = browser.new_context(
                 storage_state=session_file if os.path.exists(session_file) else None,
-                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
                 viewport={"width": 1920, "height": 1080},
                 locale="de-DE",
+                timezone_id="Europe/Berlin",
                 extra_http_headers={
-                    "Accept-Language": "de-DE,de;q=0.9,en;q=0.8"
-                }
+                    "Accept-Language": "de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7",
+                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+                    "Accept-Encoding": "gzip, deflate, br",
+                    "Cache-Control": "no-cache",
+                    "Pragma": "no-cache",
+                    "Sec-Fetch-Dest": "document",
+                    "Sec-Fetch-Mode": "navigate",
+                    "Sec-Fetch-Site": "none",
+                    "Sec-Fetch-User": "?1",
+                    "Upgrade-Insecure-Requests": "1"
+                },
+                permissions=['geolocation'],
+                geolocation={"latitude": 52.5200, "longitude": 13.4050}  # Berlin coordinates
             )
 
             page = context.new_page()
