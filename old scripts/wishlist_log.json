@@ -1,0 +1,50 @@
+[
+    {
+        "step": "Script Start",
+        "status": "info",
+        "timestamp": "2025-08-31T23:45:29.028534",
+        "details": "Wishlist script started at 2025-08-31 23:45:29.028521"
+    },
+    {
+        "step": "Setup",
+        "status": "info",
+        "timestamp": "2025-08-31T23:45:29.028586",
+        "details": "Account: marvinsiebert890@gmail.com"
+    },
+    {
+        "step": "Setup",
+        "status": "info",
+        "timestamp": "2025-08-31T23:45:29.028592",
+        "details": "Proxy: http://res.proxy-seller.com:10125"
+    },
+    {
+        "step": "Browser",
+        "status": "info",
+        "timestamp": "2025-08-31T23:45:29.417236",
+        "details": "Launching browser..."
+    },
+    {
+        "step": "Execution",
+        "status": "info",
+        "timestamp": "2025-08-31T23:45:32.122156",
+        "details": "Starting wishlist automation..."
+    },
+    {
+        "step": "Login",
+        "status": "info",
+        "timestamp": "2025-08-31T23:45:32.122194",
+        "details": "Starting login process for marvinsiebert890@gmail.com"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-08-31T23:45:37.129647",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Critical Error",
+        "status": "error",
+        "timestamp": "2025-08-31T23:45:47.242484",
+        "details": "Script failed: Target page, context or browser has been closed"
+    }
+]

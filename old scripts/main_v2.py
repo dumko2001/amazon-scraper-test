@@ -10,11 +10,9 @@ from playwright_stealth import stealth_sync
 # --- CONFIGURATION ---
 AMAZON_URL = "https://www.amazon.de/"
 
-# Client-provided credentials and proxies
+# Client-provided credentials and proxies - Only using Nikolas account as requested
 ACCOUNTS = [
     {"email": "niklasdornberger@gmail.com", "password": "zappy3r@!"},
-    {"email": "tobiashenschel7@gmail.com", "password": "bouncy6#x%"},
-    {"email": "marvinsiebert890@gmail.com", "password": "perky1t!"},
 ]
 
 PROXIES = [
@@ -104,8 +102,59 @@ def handle_popups(page: Page, action: str):
             pass # Ignore errors if the button disappears before click
 
 # --- CORE AUTOMATION LOGIC ---
+def check_login_status(page: Page):
+    """Always check login status by clicking hello button and verifying we're truly logged in."""
+    log_step("Login Check", "info", "Checking current login status")
+
+    # First, look for the hello button/link
+    hello_selectors = [
+        '#nav-link-accountList-nav-line-1:has-text("Hallo")',
+        '#nav-link-accountList:has-text("Hallo")',
+        'a#nav-link-accountList',
+        '[data-nav-role="signin"]'
+    ]
+
+    hello_element = find_element_resilient(page, hello_selectors, timeout=5000)
+    if hello_element:
+        log_step("Login Check", "info", "Found hello/account element, clicking to verify login status")
+        hello_element.click()
+        human_like_delay(2, 3)
+
+        # After clicking, check if we're on a login page or account page
+        login_page_indicators = [
+            'input[name="email"]',
+            'input#ap_email',
+            'input[type="email"]',
+            '#ap_signin_form'
+        ]
+
+        # If we see login form elements, we're not logged in
+        for indicator in login_page_indicators:
+            if page.locator(indicator).is_visible(timeout=3000):
+                log_step("Login Check", "info", "Login form detected - not logged in")
+                return False
+
+        # If we see account-related elements, we're logged in
+        account_indicators = [
+            'text="Mein Konto"',
+            'text="Your Account"',
+            'text="Bestellungen"',
+            'text="Orders"',
+            '#nav-al-your-account'
+        ]
+
+        for indicator in account_indicators:
+            if page.locator(indicator).is_visible(timeout=3000):
+                log_step("Login Check", "success", "Confirmed logged in - account page visible")
+                # Navigate back to main page
+                page.goto(AMAZON_URL, timeout=60000, wait_until='domcontentloaded')
+                return True
+
+    log_step("Login Check", "warning", "Could not determine login status, assuming not logged in")
+    return False
+
 def login_to_amazon(page: Page, email: str, password: str):
-    """Robust login function with session reuse and popup handling."""
+    """Robust login function that always checks login status first."""
     log_step("Login", "info", f"Navigating to Amazon.de for {email}")
     page.goto(AMAZON_URL, timeout=60000, wait_until='domcontentloaded')
 
@@ -124,17 +173,10 @@ def login_to_amazon(page: Page, email: str, password: str):
         cookie_button.click()
         human_like_delay(1, 2)
 
-    # Check if already logged in by looking for a personalized greeting.
-    login_indicators = [
-        '#nav-link-accountList-nav-line-1:has-text("Hallo")',
-        '#nav-link-accountList:has-text("Hallo")',
-        'input#twotabsearchtextbox'  # Search box indicates we're on main page and likely logged in
-    ]
-
-    for indicator in login_indicators:
-        if page.locator(indicator).is_visible(timeout=5000):
-            log_step("Login", "success", "Already logged in from a previous session.")
-            return
+    # Always check login status by clicking hello button
+    if check_login_status(page):
+        log_step("Login", "success", "Already logged in - verified by checking account page")
+        return
 
     # Click sign-in link with improved selectors
     signin_selectors = [
@@ -293,21 +335,112 @@ def browse_random_products(page: Page, num_products=5):
 
     log_step("Browsing", "success", "Finished browsing products.")
 
+def create_new_wishlist(page: Page, wishlist_name: str):
+    """Creates a new wishlist with the given name."""
+    log_step("Wishlist Creation", "info", f"Creating new wishlist: {wishlist_name}")
+
+    try:
+        # Navigate to wishlist page
+        wishlist_url = f"{AMAZON_URL}hz/wishlist/ls"
+        page.goto(wishlist_url, timeout=60000, wait_until='domcontentloaded')
+        human_like_delay(2, 3)
+
+        # Look for create new list button
+        create_list_selectors = [
+            'a:has-text("Liste erstellen")',
+            'a:has-text("Create a List")',
+            'button:has-text("Liste erstellen")',
+            'button:has-text("Create a List")',
+            '[data-action="create-list"]',
+            'a[href*="create"]'
+        ]
+
+        create_button = find_element_resilient(page, create_list_selectors, timeout=10000)
+        if create_button:
+            create_button.click()
+            human_like_delay(2, 3)
+
+            # Fill in wishlist name
+            name_selectors = [
+                'input[name="name"]',
+                'input#list-name',
+                'input[placeholder*="Name"]',
+                'input[aria-label*="Name"]'
+            ]
+
+            name_input = find_element_resilient(page, name_selectors, timeout=10000)
+            if name_input:
+                name_input.fill(wishlist_name)
+                human_like_delay(1, 2)
+
+                # Submit the form
+                submit_selectors = [
+                    'button:has-text("Liste erstellen")',
+                    'button:has-text("Create List")',
+                    'input[type="submit"]',
+                    'button[type="submit"]'
+                ]
+
+                submit_button = find_element_resilient(page, submit_selectors, timeout=5000)
+                if submit_button:
+                    submit_button.click()
+                    human_like_delay(2, 3)
+                    log_step("Wishlist Creation", "success", f"Successfully created wishlist: {wishlist_name}")
+                    return True
+                else:
+                    log_step("Wishlist Creation", "warning", "Could not find submit button")
+            else:
+                log_step("Wishlist Creation", "warning", "Could not find name input field")
+        else:
+            log_step("Wishlist Creation", "warning", "Could not find create list button")
+
+    except Exception as e:
+        log_step("Wishlist Creation", "error", f"Error creating wishlist: {str(e)}")
+
+    return False
+
 def add_products_to_wishlist(page: Page, num_to_add=2):
-    """Adds products to wishlist using a multi-layered, highly resilient strategy with updated selectors."""
-    log_step("Wishlist", "info", f"Attempting to add {num_to_add} products to wishlist.")
-    search_terms = ["geschenke", "elektronik", "bücher", "spielzeug", "küche", "mode"]
+    """Creates multiple wishlists and adds products to them using a multi-layered, highly resilient strategy."""
+    log_step("Wishlist", "info", f"Creating multiple wishlists and adding {num_to_add} products total.")
+
+    # Define wishlist names and corresponding search terms
+    wishlist_configs = [
+        {"name": "Electronics & Gadgets", "search_terms": ["elektronik", "smartphone", "laptop", "kopfhörer"]},
+        {"name": "Books & Media", "search_terms": ["bücher", "kindle", "hörbuch", "dvd"]},
+        {"name": "Home & Kitchen", "search_terms": ["küche", "haushalt", "möbel", "dekoration"]},
+        {"name": "Fashion & Style", "search_terms": ["mode", "kleidung", "schuhe", "accessoires"]},
+        {"name": "Gifts & Toys", "search_terms": ["geschenke", "spielzeug", "spiele", "hobby"]}
+    ]
+
     added_count = 0
     attempts = 0
-    max_attempts = 15
+    max_attempts = 20
 
-    while added_count < num_to_add and attempts < max_attempts:
-        attempts += 1
-        search_term = random.choice(search_terms)
-        log_step("Wishlist", "info", f"Searching for '{search_term}' (attempt {attempts})")
+    # Create wishlists and add products to each
+    for wishlist_config in wishlist_configs:
+        if added_count >= num_to_add:
+            break
 
-        try:
-            page.goto(f"{AMAZON_URL}s?k={search_term}", wait_until='domcontentloaded', timeout=60000)
+        wishlist_name = wishlist_config["name"]
+        search_terms = wishlist_config["search_terms"]
+
+        # Create the wishlist first
+        if create_new_wishlist(page, wishlist_name):
+            log_step("Wishlist", "info", f"Created wishlist '{wishlist_name}', now adding products")
+
+            # Try to add at least one product to this wishlist
+            products_added_to_this_list = 0
+            list_attempts = 0
+            max_list_attempts = 5
+
+            while products_added_to_this_list < 1 and list_attempts < max_list_attempts and added_count < num_to_add:
+                list_attempts += 1
+                attempts += 1
+                search_term = random.choice(search_terms)
+                log_step("Wishlist", "info", f"Searching for '{search_term}' for wishlist '{wishlist_name}' (attempt {list_attempts})")
+
+                try:
+                    page.goto(f"{AMAZON_URL}s?k={search_term}", wait_until='domcontentloaded', timeout=60000)
 
             # Wait for page to load and handle any popups
             human_like_delay(2, 4)
@@ -388,21 +521,59 @@ def add_products_to_wishlist(page: Page, num_to_add=2):
 
                         if wishlist_button:
                             wishlist_button.click()
-                            human_like_delay()
+                            human_like_delay(2, 3)
+
+                            # Handle wishlist selection popup if it appears
+                            wishlist_select_selectors = [
+                                f'span:has-text("{wishlist_name}")',
+                                f'label:has-text("{wishlist_name}")',
+                                'input[type="radio"]:first-of-type',  # Select first wishlist if specific name not found
+                                'button:has-text("Hinzufügen")',
+                                'button:has-text("Add")'
+                            ]
+
+                            # Try to select the specific wishlist
+                            wishlist_selected = False
+                            for selector in wishlist_select_selectors:
+                                try:
+                                    element = page.locator(selector).first
+                                    if element.is_visible(timeout=3000):
+                                        element.click()
+                                        human_like_delay(1, 2)
+                                        wishlist_selected = True
+                                        break
+                                except:
+                                    continue
+
+                            # If we found a wishlist selection, try to confirm
+                            if wishlist_selected:
+                                confirm_selectors = [
+                                    'button:has-text("Hinzufügen")',
+                                    'button:has-text("Add")',
+                                    'input[type="submit"]'
+                                ]
+                                confirm_button = find_element_resilient(page, confirm_selectors, timeout=3000)
+                                if confirm_button:
+                                    confirm_button.click()
+                                    human_like_delay(1, 2)
+
                             handle_popups(page, "Wishlist")
                             added_count += 1
-                            log_step("Wishlist", "success", f"Added product {added_count}/{num_to_add} to wishlist.")
-                            break # Success, move to the next search attempt if more are needed
+                            products_added_to_this_list += 1
+                            log_step("Wishlist", "success", f"Added product {added_count}/{num_to_add} to wishlist '{wishlist_name}'.")
+                            break # Success, move to the next product for this wishlist
                         else:
                             log_step("Wishlist", "warning", "No wishlist button found on this page.")
+                    else:
+                        log_step("Wishlist", "warning", f"No valid product URLs found for '{search_term}'.")
                 else:
-                    log_step("Wishlist", "warning", f"No valid product URLs found for '{search_term}'.")
-            else:
-                log_step("Wishlist", "warning", f"No product links found for '{search_term}'.")
+                    log_step("Wishlist", "warning", f"No product links found for '{search_term}'.")
 
-        except Exception as e:
-            log_step("Wishlist", "error", f"An error occurred during attempt {attempts}: {str(e)}")
-            continue
+                except Exception as e:
+                    log_step("Wishlist", "error", f"An error occurred during attempt {attempts}: {str(e)}")
+                    continue
+        else:
+            log_step("Wishlist", "warning", f"Failed to create wishlist '{wishlist_name}', skipping")
 
     if added_count < num_to_add:
         log_step("Wishlist", "warning", f"Only added {added_count}/{num_to_add} products to wishlist.")

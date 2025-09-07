@@ -1,74 +1,476 @@
 [
     {
+        "step": "Script Start",
+        "status": "info",
+        "timestamp": "2025-09-01T03:17:16.691772",
+        "details": "Amazon automation script started at 2025-09-01 03:17:16.691760"
+    },
+    {
         "step": "Setup",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:14.859975",
-        "details": "Using account: niklasdornberger@gmail.com, proxy: http://res.proxy-seller.com:10127"
+        "timestamp": "2025-09-01T03:17:16.691811",
+        "details": "Using account: niklasdornberger@gmail.com, proxy: http://res.proxy-seller.com:10125"
     },
     {
-        "step": "Login",
+        "step": "Browser Setup",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:16.474289",
-        "details": "Navigating to Amazon.de for niklasdornberger@gmail.com"
+        "timestamp": "2025-09-01T03:17:17.043790",
+        "details": "Starting browser (attempt 1/2)"
     },
     {
-        "step": "Login",
-        "status": "success",
-        "timestamp": "2025-08-31T22:42:21.344758",
-        "details": "Already logged in using a valid session."
-    },
-    {
-        "step": "Wishlist",
+        "step": "Task Execution",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:21.344788",
-        "details": "Starting direct URL wishlist task."
+        "timestamp": "2025-09-01T03:17:19.431711",
+        "details": "Starting automation tasks..."
     },
     {
-        "step": "Wishlist",
+        "step": "Login Check",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:21.344796",
-        "details": "Processing product 1/2: https://www.amazon.de/dp/B08P265T23"
+        "timestamp": "2025-09-01T03:17:19.431757",
+        "details": "Starting comprehensive login verification..."
     },
     {
-        "step": "Wishlist",
+        "step": "Page Loading",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:22.065416",
+        "timestamp": "2025-09-01T03:17:29.531868",
         "details": "Waiting for page to be fully interactive..."
     },
     {
-        "step": "Wishlist",
-        "status": "error",
-        "timestamp": "2025-08-31T22:42:33.701702",
-        "details": "Failed to add product 1: Page.wait_for_selector: Target page, context or browser has been closed\nCall log:\nwaiting for locator(\"#buybox, #rightCol\") to be visible\n"
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:17:37.907906",
+        "details": "Page is now fully interactive"
     },
     {
-        "step": "Wishlist",
+        "step": "Login Verification",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:33.701767",
-        "details": "Processing product 2/2: https://www.amazon.de/dp/3836294459"
+        "timestamp": "2025-09-01T03:17:37.907957",
+        "details": "Verifying real login status by clicking Hello button..."
     },
     {
-        "step": "Wishlist",
-        "status": "error",
-        "timestamp": "2025-08-31T22:42:33.704199",
-        "details": "Failed to add product 2: Page.goto: Target page, context or browser has been closed"
+        "step": "Login Verification",
+        "status": "success",
+        "timestamp": "2025-09-01T03:17:40.474293",
+        "details": "REAL LOGIN CONFIRMED - Found: ['meine bestellungen']"
     },
     {
-        "step": "Wishlist",
+        "step": "Page Loading",
         "status": "info",
-        "timestamp": "2025-08-31T22:42:33.704236",
-        "details": "Finished task. Successfully added 0/2 products."
+        "timestamp": "2025-09-01T03:17:43.883551",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:17:49.875603",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Login Check",
+        "status": "success",
+        "timestamp": "2025-09-01T03:17:49.875660",
+        "details": "Already properly logged in"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:17:49.875691",
+        "details": "Starting to browse 5 random products"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:17:49.875732",
+        "details": "Searching for 'kleidung' (product 1/5)"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:17:52.340699",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "warning",
+        "timestamp": "2025-09-01T03:18:22.352738",
+        "details": "Page loading timeout, proceeding with caution"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:18:22.433154",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:18:22.505521",
+        "details": "Navigating to product: https://www.amazon.de/SINOPHANT-Leggings-Superweic..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:18:25.608286",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "warning",
+        "timestamp": "2025-09-01T03:18:55.616106",
+        "details": "Page loading timeout, proceeding with caution"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-09-01T03:19:01.246094",
+        "details": "Successfully browsed and collected product 1/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:19:01.246157",
+        "details": "Searching for 'bücher' (product 2/5)"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:19:04.083505",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "warning",
+        "timestamp": "2025-09-01T03:19:34.087527",
+        "details": "Page loading timeout, proceeding with caution"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:19:34.132324",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:19:34.254667",
+        "details": "Navigating to product: https://www.amazon.de/22-Bahnen-Lieblingsbuch-unab..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:19:50.430929",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:20:05.158167",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-09-01T03:20:09.566165",
+        "details": "Successfully browsed and collected product 2/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:20:09.566228",
+        "details": "Searching for 'kleidung' (product 3/5)"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:20:11.881522",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:20:29.274673",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:20:29.386945",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:20:29.458804",
+        "details": "Navigating to product: https://www.amazon.de/SINOPHANT-Leggings-Superweic..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:20:34.479013",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "warning",
+        "timestamp": "2025-09-01T03:21:04.491832",
+        "details": "Page loading timeout, proceeding with caution"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-09-01T03:21:09.452878",
+        "details": "Successfully browsed and collected product 3/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:21:09.452967",
+        "details": "Searching for 'angebote' (product 4/5)"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:21:12.834966",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:21:25.338709",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:21:25.462345",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:21:25.519970",
+        "details": "Navigating to product: https://www.amazon.de/JACK-JONES-Herren-Jjestar-T-..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:21:28.524456",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "warning",
+        "timestamp": "2025-09-01T03:21:58.529710",
+        "details": "Page loading timeout, proceeding with caution"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-09-01T03:22:06.012903",
+        "details": "Successfully browsed and collected product 4/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:22:06.013018",
+        "details": "Searching for 'kleidung' (product 5/5)"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:22:08.151737",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:22:23.983297",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:22:24.119290",
+        "details": "Found products using selector: a[href*=\"/dp/\"]"
+    },
+    {
+        "step": "Browsing",
+        "status": "info",
+        "timestamp": "2025-09-01T03:22:24.178524",
+        "details": "Navigating to product: https://www.amazon.de/SINOPHANT-Leggings-Superweic..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:22:27.713260",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "warning",
+        "timestamp": "2025-09-01T03:22:57.717344",
+        "details": "Page loading timeout, proceeding with caution"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-09-01T03:23:04.200630",
+        "details": "Successfully browsed and collected product 5/5"
+    },
+    {
+        "step": "Browsing",
+        "status": "success",
+        "timestamp": "2025-09-01T03:23:04.200670",
+        "details": "Finished browsing. Collected 5 products for wishlist creation"
+    },
+    {
+        "step": "Wishlist Creation",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:04.200682",
+        "details": "Creating 2 wishlists and adding products"
+    },
+    {
+        "step": "Wishlist Creation",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:04.201389",
+        "details": "=== Processing product 1/2: SINOPHANT Leggings Damen High Waist - Blickdicht L... ==="
+    },
+    {
+        "step": "Create Wishlist",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:04.201404",
+        "details": "Creating new wishlist: 'My Automation List 1 - 09-01 03:23'"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:05.830629",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:23:12.487325",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Create Wishlist",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:12.511462",
+        "details": "Found Create List button, clicking..."
+    },
+    {
+        "step": "Create Wishlist",
+        "status": "error",
+        "timestamp": "2025-09-01T03:23:22.608981",
+        "details": "Create List modal did not appear"
+    },
+    {
+        "step": "Wishlist Creation",
+        "status": "error",
+        "timestamp": "2025-09-01T03:23:22.609050",
+        "details": "FAILED to create wishlist for product 1"
+    },
+    {
+        "step": "Wishlist Creation",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:27.068252",
+        "details": "=== Processing product 2/2: 22 Bahnen: Roman | Lieblingsbuch des unabhängigen ... ==="
+    },
+    {
+        "step": "Create Wishlist",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:27.068728",
+        "details": "Creating new wishlist: 'My Automation List 2 - 09-01 03:23'"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:28.681476",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:23:34.892538",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Create Wishlist",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:34.906164",
+        "details": "Found Create List button, clicking..."
+    },
+    {
+        "step": "Create Wishlist",
+        "status": "error",
+        "timestamp": "2025-09-01T03:23:44.964210",
+        "details": "Create List modal did not appear"
+    },
+    {
+        "step": "Wishlist Creation",
+        "status": "error",
+        "timestamp": "2025-09-01T03:23:44.964343",
+        "details": "FAILED to create wishlist for product 2"
+    },
+    {
+        "step": "Wishlist Creation",
+        "status": "success",
+        "timestamp": "2025-09-01T03:23:48.662380",
+        "details": "Completed. Successfully added 0/2 products to new wishlists."
+    },
+    {
+        "step": "Prime Cancellation",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:48.662506",
+        "details": "Checking for active Prime membership"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:23:50.510882",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:24:02.022912",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Prime Cancellation",
+        "status": "info",
+        "timestamp": "2025-09-01T03:24:02.030538",
+        "details": "Active Prime membership found. Attempting to cancel"
+    },
+    {
+        "step": "Page Loading",
+        "status": "info",
+        "timestamp": "2025-09-01T03:24:02.515800",
+        "details": "Waiting for page to be fully interactive..."
+    },
+    {
+        "step": "Page Loading",
+        "status": "success",
+        "timestamp": "2025-09-01T03:24:09.405232",
+        "details": "Page is now fully interactive"
+    },
+    {
+        "step": "Prime Cancellation",
+        "status": "success",
+        "timestamp": "2025-09-01T03:24:09.405270",
+        "details": "Clicked cancel Prime button. Process initiated"
+    },
+    {
+        "step": "Session",
+        "status": "success",
+        "timestamp": "2025-09-01T03:24:09.760452",
+        "details": "Session state saved to sessions/niklasdornberger.json"
     },
     {
         "step": "Completion",
-        "status": "success",
-        "timestamp": "2025-08-31T22:42:33.931860",
-        "details": "Script finished."
-    },
-    {
-        "step": "Teardown",
-        "status": "info",
-        "timestamp": "2025-08-31T22:42:33.931883",
-        "details": "Closing browser."
+        "status": "warning",
+        "timestamp": "2025-09-01T03:24:09.760518",
+        "details": "Automation completed with partial success. Added 0/2 products."
     }
 ]
